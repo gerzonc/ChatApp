@@ -4,8 +4,6 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {enableScreens} from 'react-native-screens';
 
-enableScreens();
-
 import {List, Detail} from './src/screens';
 
 const Stack = createStackNavigator();

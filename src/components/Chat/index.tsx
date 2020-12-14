@@ -12,8 +12,9 @@ import colors from '../../../assets/colors';
 import Avatar from '../Avatar';
 import Badge from '../Badge';
 
-type Message = {
+export type Message = {
   sentTime: string;
+  phone_number: string;
   text: string;
   unread: boolean;
 };
