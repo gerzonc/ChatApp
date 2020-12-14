@@ -35,16 +35,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     height: 50,
     width: width * 0.9,
-    backgroundColor: colors.background,
     borderRadius: 15,
+    backgroundColor: colors.background,
   },
   icon: {
     marginRight: 8,
   },
   input: {
+    fontWeight: 'bold',
     width: width * 0.7,
     fontSize: 17,
     color: colors.secondary,
-    fontWeight: 'bold',
   },
 });
