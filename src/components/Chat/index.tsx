@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, Dimensions} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import colors from '../../../assets/colors';
 import Avatar from '../Avatar';
+import Badge from '../Badge';
 
 type Message = {
   sentTime: Date;
