@@ -10,7 +10,7 @@ const contact: Contact = {
   status: 'Online',
   messages: [
     {
-      sentTime: "8:00 PM",
+      sentTime: '8:00 PM',
       text: "Yoo bro what's the homework?",
       unread: true,
     },

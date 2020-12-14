@@ -20,7 +20,6 @@ const Searchbar = () => {
         underlineColorAndroid="rgba(0,0,0,0)"
         placeholderTextColor={colors.secondary}
         autoCapitalize="words"
-        textContentType="name"
       />
     </View>
   );

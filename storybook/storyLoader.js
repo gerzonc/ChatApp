@@ -8,6 +8,7 @@ function loadStories() {
   require('../src/components/Badge/Badge.stories');
   require('../src/components/Chat/Chat.stories');
   require('../src/components/Header/Header.stories');
+  require('../src/components/MessageBox/MessageBox.stories');
   require('../src/components/Searchbar/Searchbar.stories');
 }
 
@@ -16,6 +17,7 @@ const stories = [
   '../src/components/Badge/Badge.stories',
   '../src/components/Chat/Chat.stories',
   '../src/components/Header/Header.stories',
+  '../src/components/MessageBox/MessageBox.stories',
   '../src/components/Searchbar/Searchbar.stories',
 ];
 
