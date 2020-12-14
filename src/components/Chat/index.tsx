@@ -6,7 +6,7 @@ import Avatar from '../Avatar';
 import Badge from '../Badge';
 
 type Message = {
-  sentTime: Date;
+  sentTime: string;
   text: string;
   unread: boolean;
 };
@@ -45,7 +45,9 @@ const Chat = ({contact}: ChatProps) => {
       </View>
       {contact.messages && (
         <View style={styles.activityBody}>
-          <Text>{contact.messages[contact.messages.length - 1].sentTime}</Text>
+          <Text style={styles.time}>
+            {contact.messages[contact.messages.length - 1].sentTime}
+          </Text>
           {unreadMessages.length && <Badge count={unreadMessages.length} />}
         </View>
       )}
@@ -72,10 +74,14 @@ const styles = StyleSheet.create({
   name: {
     color: colors.contact,
     fontSize: 17,
+
     fontWeight: 'bold',
   },
   message: {
     color: colors.text,
+  },
+  time: {
+    color: colors.primary,
   },
   messageUnread: {
     color: colors.text,
