@@ -1,20 +1,19 @@
 import React from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from 'react-native-screens/native-stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import {enableScreens} from 'react-native-screens';
 
 enableScreens();
 
-import List from './src/screens/List';
-import Detail from './src/screens/Detail';
+import {List, Detail} from './src/screens';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 const App = () => {
   const MainStack = () => {
     return (
-      <Stack.Navigator initialRouteName="List">
+      <Stack.Navigator initialRouteName="List" headerMode="none">
         <Stack.Screen name="List" component={List} />
         <Stack.Screen name="Detail" component={Detail} />
       </Stack.Navigator>
