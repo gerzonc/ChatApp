@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, Dimensions} from 'react-native';
+
 import colors from '../../../assets/colors';
 import {Contact, Message} from '../Chat';
 
@@ -17,7 +18,7 @@ const Bubble = ({contact, message}: BubbleProps) => {
     <View>
       <View style={isContactMessage ? styles.contactMessage : styles.myMessage}>
         <Text
-          numberOfLines={6}
+          numberOfLines={4}
           style={isContactMessage ? styles.textContact : styles.myText}>
           {message.text}
         </Text>
@@ -44,6 +45,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     paddingVertical: 16,
     maxWidth: width * 0.65,
+    elevation: 4,
     shadowOpacity: 0.2,
     shadowOffset: {
       height: 1,
@@ -61,6 +63,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 18,
     paddingHorizontal: 18,
     paddingVertical: 16,
+    maxWidth: width * 0.65,
+    elevation: 4,
     shadowOpacity: 0.2,
     shadowOffset: {
       height: 1,

@@ -7,8 +7,8 @@ import {
   StatusBar,
   Platform,
 } from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import DeviceInfo from 'react-native-device-info';
+
 import colors from '../../../assets/colors';
 import Searchbar from '../Searchbar';
 
@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={colors.primary} />
-      <Text style={styles.heading}>Messages</Text>
+      <Text style={styles.heading}>Chats</Text>
       <Searchbar />
     </View>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, TextInput, StyleSheet, Dimensions, Text} from 'react-native';
+import {View, TextInput, StyleSheet, Dimensions} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+
 import colors from '../../../assets/colors';
 
 const {width} = Dimensions.get('screen');

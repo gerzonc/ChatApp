@@ -1,4 +1,3 @@
-import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {
   View,
@@ -8,6 +7,7 @@ import {
   Pressable,
   GestureResponderEvent,
 } from 'react-native';
+
 import colors from '../../../assets/colors';
 import Avatar from '../Avatar';
 import Badge from '../Badge';
@@ -47,7 +47,10 @@ const Chat = ({contact, onPress}: ChatProps) => {
           <Text style={styles.name}>
             {contact.name ? contact.name : contact.phone_number}
           </Text>
-          <Text style={unreadMessages.length ? styles.messageUnread : styles.message}>
+          <Text
+            style={
+              unreadMessages.length ? styles.messageUnread : styles.message
+            }>
             {contact.messages
               ? contact.messages[contact.messages.length - 1].text
               : contact.status}
