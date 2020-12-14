@@ -29,7 +29,7 @@ export default Header;
 const styles = StyleSheet.create({
   container: {
     width,
-    height: DeviceInfo.hasNotch() ? 228 : Platform.OS === 'ios' ? 198 : 188,
+    height: DeviceInfo.hasNotch() ? 200 : Platform.OS === 'ios' ? 198 : 188,
     borderBottomLeftRadius: 33,
     borderBottomRightRadius: 33,
     paddingTop: 50,

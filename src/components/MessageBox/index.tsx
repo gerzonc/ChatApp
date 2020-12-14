@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-  View,
-  TextInput,
-  StyleSheet,
-  Dimensions,
-  Pressable,
-} from 'react-native';
+import {View, TextInput, StyleSheet, Dimensions, Pressable} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../../../assets/colors';
 
@@ -46,11 +41,11 @@ export default MessageBox;
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
     flexDirection: 'row',
     alignItems: 'center',
-    bottom: 8,
+    bottom: 34,
     paddingHorizontal: 18,
+    marginTop: 42,
     height: 56,
     width,
     backgroundColor: colors.secondary,

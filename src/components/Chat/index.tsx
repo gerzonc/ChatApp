@@ -56,13 +56,21 @@ const Chat = ({contact, onPress}: ChatProps) => {
               : contact.status}
           </Text>
         </View>
-        {contact.messages && (
+        {contact.messages && unreadMessages.length ? (
           <View style={styles.activityBody}>
             <Text style={styles.time}>
               {contact.messages[contact.messages.length - 1].sentTime}
             </Text>
-            {unreadMessages.length && <Badge count={unreadMessages.length} />}
+            <Badge count={unreadMessages.length} />
           </View>
+        ) : (
+          contact.messages && (
+            <View style={styles.noBadge}>
+              <Text style={styles.time}>
+                {contact.messages[contact.messages.length - 1].sentTime}
+              </Text>
+            </View>
+          )
         )}
       </View>
     </Pressable>
@@ -75,14 +83,20 @@ const styles = StyleSheet.create({
   container: {
     width: width * 0.9,
     flexDirection: 'row',
+    marginVertical: 10,
   },
   chatBody: {
     marginLeft: 12,
+    width: width * 0.55,
     justifyContent: 'center',
     alignItems: 'flex-start',
   },
   activityBody: {
     justifyContent: 'center',
+    alignItems: 'flex-end',
+  },
+  noBadge: {
+    marginTop: 14,
     alignItems: 'flex-end',
   },
   name: {

@@ -14,12 +14,11 @@ const {width} = Dimensions.get('screen');
 const ChatHeaderTitle = ({contact}: ChatHeaderTitleProps) => {
   return (
     <View style={styles.container}>
-      <Avatar image={contact.image} />
+      <Avatar image={contact.image} size={32} />
       <View style={styles.chatBody}>
         <Text style={styles.name}>
           {contact.name ? contact.name : contact.phone_number}
         </Text>
-        <Text style={styles.message}>{contact.status}</Text>
       </View>
     </View>
   );

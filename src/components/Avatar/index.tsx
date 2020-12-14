@@ -1,12 +1,12 @@
 import React from 'react';
 import {
   View,
-  Text,
   ImageProps,
   StyleSheet,
   Pressable,
   Image,
   GestureResponderEvent,
+  ImageSourcePropType,
 } from 'react-native';
 
 import images from '../../../assets/images';
@@ -14,15 +14,27 @@ import images from '../../../assets/images';
 interface Props {
   image?: string;
   onPress?: ((event: GestureResponderEvent) => void) | null;
+  size?: number;
 }
 
-const Avatar = ({image, onPress}: Props) => {
+const Avatar = ({image, onPress, size}: Props) => {
   return (
     <View style={styles.shadows}>
       <Pressable onPress={onPress}>
         <Image
-          style={styles.image}
-          source={image ? {uri: image} : images.avatar_placeholder}
+          style={
+            size
+              ? {
+                  width: size,
+                  height: size,
+                  borderRadius: size! / 2,
+                  overflow: 'hidden',
+                  borderWidth: 3,
+                  borderColor: '#FFF',
+                }
+              : styles.image
+          }
+          source={images.avatar_placeholder}
         />
       </Pressable>
     </View>
